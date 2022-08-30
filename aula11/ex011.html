@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+    <style>
+        body {
+            background-color: rgb(107, 169, 183);
+        }
+        
+        h1 {
+            text-align: center;
+            box-shadow: 10px 10px 10px;
+            background-color: black;
+            color: red;
+        }
+
+        span { 
+            font: 15pt Arial;
+        }
+
+        input#txt {
+            height: 20px;
+            width: 200px;
+        }
+        input {
+            width: 90pt;
+        }
+
+        div#res {
+            border:ridge 40px;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Verificando sua Nacionalidade
+    </h1>
+    <span>Em qual país você nasceu:</span> <input type="text" name="txt" id="txt">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular() {
+            var pais = window.document.querySelector('input#txt').value
+            var resp = window.document.querySelector('div#res')
+            resp.innerHTML = `Você mora no <strong>${pais}</strong>`
+            if (pais != 'Brasil') {
+                resp.innerHTML += ` e é <strong>estrangeiro</strong>!`
+            } else {
+                res.innerHTML += ` e é <strong>brasileiro</strong>!`
+            }
+        }
+    </script>
+</body>
+</html>

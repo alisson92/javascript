@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(54, 85, 34);
+            color: rgb(0, 0, 0);
+            font: normal 18pt Arial;
+        }
+
+        h1 {
+            border-radius: 15px;
+            box-shadow: 2px 3px 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="oi">
+        Iniciando estudos DOM
+    </h1>
+    <p>
+        Aqui vai o resultado
+    </p>
+    <p>
+        Apredendo a usar o <strong>DOM</strong> em JavaScript.
+    </p>
+    <div id="de">
+        Clique em mim
+    </div>
+    <div class="lista">
+        <ul>
+            <li name="nomes">
+                Arroz
+            </li>
+            <li name="nomes">
+                Feijão
+            </li>
+            <li name="nomes">
+                Batata
+            </li>
+            <li name="nomes">
+                Macarrão
+            </li>
+        </ul>
+    </div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write('Está escrito asssim: ' + p1.innerHTML)
+        var d = window.document.querySelector('div#de')
+        d.style.background = 'red'
+        d.style.color = 'black'
+        d.style.border = 'dashed 5px'
+        var f = window.document.querySelector('h1.oi')
+        f.style.background = '#238080'
+        f.innerText = 'salve galera'
+        var l = window.document.querySelector('div.lista')
+        l.style.color = 'violet'
+        l.style.border = 'dashed 9px'
+        l.style.background = 'black'
+        var one = window.document.getElementsByName('nomes')[0]
+        one.style.color = 'green'
+        var two = window.document.getElementsByName('nomes')[1]
+        two.style.color = 'yellow'
+        var three = window.document.getElementsByName('nomes')[2]
+        three.style.color = 'red'
+        var four = window.document.getElementsByName('nomes')[3]
+        four.style.color = 'white'
+        four.innerText = 'CAPAO REDONDO.. '
+    </script>
+</body>
+</html>
